@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap')
+
+$color1: #9282FD
+$color2: #43ECB3
+$color-text: #cbcbcb !important
+$text-muted: #6c6c6c !important
+
+*
+    font-family: 'Montserrat', sans-serif
+
+body
+    // background: #0f0b18 !important
+    background: url('../img/BG.jpg') no-repeat
+    background-attachment: fixed
+    background-size: cover
+    overflow-x: hidden !important
+
+.navbar
+    background: #0e0a1659 !important
+    .navbar-brand
+        font-weight: 700
+        color: $color2
+        span
+            color: $color1
+    .navbar-nav
+        a
+            color: $color-text
+
+.banner
+    h1
+        color: $color-text
+        span
+            font-weight: 300 !important
+    p.lead
+        color: $text-muted
+    .btn-start
+        transform: rotate(45deg)
+        position: relative
+        background-image: linear-gradient(70deg, $color1, $color2)
+        border: none !important
+        margin-right: 20px
+        -webkit-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1)
+        &::before
+            content: ''
+            position: absolute
+            top: -7px
+            left: -7px
+            right: -7px
+            bottom: -7px
+            border: 1px solid $color1
+            border-radius: 5px
+        &:hover
+            -webkit-animation: none
+            transform: rotate(45deg) scale(1.1)
+        i
+            transform: rotate(-45deg)
+    .btn-label
+        text-transform: uppercase
+        letter-spacing: 4px
+        font-weight: 500 !important
+        color: $color1
+
+@keyframes pulse
+    50%
+        box-shadow: 0 0 0 0 $color1
+    100%
+        box-shadow: 0 0 0 10px #9282fd00
+
+.skills
+    margin-bottom: 100px
+    .card
+        border-radius: 10px
+        box-shadow: 15px 15px 0 $color1
+        background: transparent
+        border: 1px solid #8879ed
+    ul
+        list-style: none
+        margin-bottom: 0
+        color: $color-text
+
+.about
+    margin-bottom: 100px
+    h3
+        font-weight: 600 !important
+        border-bottom: 1px solid #d3d3d3
+        padding-bottom: 5px
+        margin-bottom: 20px
+        color: $color-text
+
+    p
+        font-weight: 300 !important
+        color: $text-muted
+
+    h5
+        color: #706BE9
+
+    .education
+        span
+            color: #b9bbbd
+            font-size: 14px
+
+.contact
+    margin-bottom: 100px
+    h3
+        font-weight: 600 !important
+        margin-bottom: 25px
+        text-align: center
+        color: $color-text
+    .card
+        background: transparent
+        .icon
+            margin-bottom: 20px
+        .caption
+            text-align: center
+            background-image: linear-gradient(135deg, $color1, $color2)
+            padding: 13px 20px
+            border-radius: 8px
+            color: #fff
+            a
+                text-decoration: none
+                color: #fff
+                &:hover
+                    color: #171ae6
+
+footer
+    box-shadow: 0 -10px 11px #0000000d
+    p
+        padding: 0 0 !important
+        margin: 0 0 !important
+        font-size: 14px
+        color: $color-text
+        span
+            color: #686868
+            font-weight: 600
+
+@keyframes flicker
+    0%,100%
+        filter: blur(2px) opacity(0)
+    50%
+        filter: blur(0) opacity(1)
+
+.stars
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat
+    // background: url(../img/stars.webp) no-repeat
+    // background-size: cover
+    // background-attachment: fixed
+    position: absolute
+    width: 100vw
+    height: 100vh
+    display: block
+    animation: flicker 3s linear infinite
+    z-index: -1
+
+@media (max-width:980px)
+    .navbar
+        button
+            border: unset
+            span
+                filter: invert(1)
+
+    .skills, .about, .contact
+        margin-bottom: 60px
+
+    .banner
+        text-align: center
+        p.lead
+            font-size: 1rem
+        .start
+            justify-content: center !important
+            text-align: center
+            button
+                transform: scale(.9) rotate(45deg)
+                margin: unset
+            span
+                display: none
+    .contact
+        .caption
+            font-size: .8rem
+
+@media (max-width:768px)
+    .skills
+        .row
+            padding-bottom: 0 !important
+            div
+                border-bottom: 1px solid #d9d9d9
+                margin-bottom: 1rem
+                padding-bottom: 1rem
+                &:last-child
+                    border-bottom: none
+                    margin-bottom: unset
+    .contact
+        .row
+            div
+                margin-bottom: 25px
+                .caption
+                    font-size: 14px
+                &:last-child
+                    margin-bottom: unset
+
+@media (max-width:578px)
+    // .stars
+    //     background: url(../img/stars.webp) no-repeat
+    //     background-size: cover
+    //     background-attachment: fixed
+    //     animation: none
+    //     position: absolute
+    //     width: 100vw
+    //     height: 100vh
+    //     display: block
+    //     z-index: -1
+
+    .skills, .about, .contact
+        margin-bottom: 40px
+
+    .skills
+        .card
+            padding: 1rem 1.5rem
+            ul
+                font-size: 14px
+            .row
+                div
+                    border-bottom: 1px solid #d9d9d9
+                    margin-bottom: 1rem
+                    padding-bottom: 1rem
+                    &:last-child
+                        border-bottom: none
+                        margin-bottom: unset
+
+    .contact
+        .row
+            div
+                margin-bottom: 25px
+                .card
+                    padding: 0 1rem !important
+                    .caption
+                        font-size: 13px
+                &:last-child
+                    margin-bottom: unset
+
+    footer
+        p
+            font-size: 11px

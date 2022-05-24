@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body ondragstart="return false">
+    <div class="stars"> </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                Zhi<span>END</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item pe-2">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container col-xxl-8 px-4 py-5 banner">
+        <div class="row flex-lg-row-reverse align-items-center justify-content-center">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="img/banner.svg" class="d-block mx-lg-auto mx-sm-auto img-fluid" alt="Bootstrap Themes"
+                    width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3"><span>Hi, My Name is</span><br>
+                    Fauzan Nurhikmah</h1>
+                <p class="lead">Seorang teknologi enthusiast yang saat ini sedang menekuni
+                    dunia coding dan kadang suka design</p>
+                <div class="d-md-flex justify-content-lg-start align-items-center start">
+                    <button type="button" class="btn btn-primary btn-start btn-md"><i
+                            class="fa-solid fa-play"></i></button>
+                    <span class="btn-label">Start</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container skills" id="skills">
+        <div class="row justify-content-center">
+            <div class="col-11">
+                <div class="card p-lg-5 p-md-4 p-sm-4">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 d-flex align-items-center">
+                            <i class="fa-solid text-info fa-3x fa-server"></i>
+                            <ul>
+                                <li>PHP</li>
+                                <li>Laravel</li>
+                                <li>MySQL</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-12 d-flex align-items-center">
+                            <i class="fa-brands text-primary fa-3x fa-css3"></i>
+                            <ul>
+                                <li>Tailwind</li>
+                                <li>Bootstrap</li>
+                                <li>Vuetify</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-12 d-flex align-items-center">
+                            <i class="fa-brands text-warning fa-3x fa-js-square"></i>
+                            <ul>
+                                <li>Javascript</li>
+                                <li>Vue.js</li>
+                                <li>Next.js</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-xxl-8 px-4 about" id="about">
+        <div class="row justify-content-center">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="img/about.png" class="d-block mx-lg-auto mx-sm-auto img-fluid" alt="Bootstrap Themes"
+                    width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h3>About</h3>
+                <p>Saya merupakan lulusan dari jurusan Teknik Informatika,
+                    saya sangat suka dengan teknologi terutama dengan
+                    website, karena saya bisa belajar bagaimana cara
+                    menyusun program, problem solving, debugging,
+                    dan development dari suatu website, sehingga membuat
+                    website itu menarik untuk dipelajari
+                </p>
+                <div class="education">
+                    <h5>Pendidikan Terakhir</h5>
+                    <span>2018 - 2021</span>
+                    <p>AMIK GARUT (Teknik Informatika)</p>
+                </div>
+                <div class="experience">
+                    <h5>Pengalaman Pekerjaan</h5>
+                    <p class="my-0">Jajap Garut (Programmer)</p>
+                    <p class="my-0">Freelance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container contact px-sm-4" id="contact">
+        <h3>Contact</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-12">
+                <div class="card border-0 h-100">
+                    <div class="text-center icon">
+                        <i class="fa-solid fa-2x text-success fa-phone-flip"></i>
+                    </div>
+                    <div class="caption h-100">
+                        <span>083891287191</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="card border-0 h-100">
+                    <div class="text-center icon">
+                        <i class="fa-solid fa-envelope fa-2x text-primary"></i>
+                    </div>
+                    <div class="caption h-100">
+                        <a href="mailto:fauzannurhikmah0@gmail.com"><span>Fauzan Nurhikmah</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="card border-0 h-100">
+                    <div class="text-center icon">
+                        <i class="fa-brands fa-github text-light fa-2x"></i>
+                    </div>
+                    <div class="caption h-100">
+                        <a href="https://github.com/Zhiend19"><span>Zhiend19</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="card border-0 h-100">
+                    <div class="text-center icon">
+                        <i class="fa-brands fa-youtube text-danger fa-2x"></i>
+                    </div>
+                    <div class="caption h-100">
+                        <a href="https://www.youtube.com/channel/UCsFY8qNJNyYNs5JmktLgA6w"><span>Zhiend
+                                DEV</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container py-3">
+            <div class="d-flex justify-content-between">
+                <p>Copyright© All Reserved</p>
+                <p>Design by <span>Fauzan Nurhikmah</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script>
+        const heightBody = document.body.clientHeight
+        document.querySelector(".stars").style.height = `${heightBody}px`
+    </script>
+</body>
+
+</html>
