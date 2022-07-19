@@ -15,7 +15,6 @@
 </head>
 
 <body ondragstart="return false">
-    <div class="stars"> </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -46,29 +45,55 @@
     </nav>
 
     <div class="container col-xxl-8 px-4 py-5 banner">
-        <div class="row flex-lg-row-reverse align-items-center justify-content-center">
+
+        <div class="overlay-screen d-flex align-items-center justify-content-center text-center">
+            <div>
+                <svg width="460" height="18" viewBox="0 0 460 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 9.5H222" stroke="#A3A5AC" stroke-width="2" />
+                    <path d="M10.5 4.5L15 9.5L10.5 14.5L0.5 9.5L10.5 4.5Z" fill="#A3A5AC" />
+                    <path d="M18 6.5V12.5" stroke="#A3A5AC" stroke-width="2" />
+                    <path d="M448 9.5H238" stroke="#A3A5AC" stroke-width="2" />
+                    <path d="M449.5 14.5L445 9.5L449.5 4.5L459.5 9.5L449.5 14.5Z" fill="#A3A5AC" />
+                    <path d="M442 12.5V6.5" stroke="#A3A5AC" stroke-width="2" />
+                    <circle cx="230" cy="9" r="3" fill="#A3A5AC" />
+                    <circle cx="230" cy="9" r="8" stroke="#A3A5AC" stroke-width="2" />
+                </svg>
+
+                <h1>Bring Your Imagination</h1>
+                <p>with me and follow my lead</p>
+                <button type="button" class="btn btn-primary btn-start btn-md btn-start"><i
+                        class="fa-solid fa-play"></i></button>
+            </div>
+        </div>
+        <div class="hidden transition row flex-lg-row-reverse align-items-center justify-content-center">
             <div class="col-10 col-sm-8 col-lg-6">
-                <img src="img/banner.svg" class="d-block mx-lg-auto mx-sm-auto img-fluid" alt="Bootstrap Themes"
-                    width="700" height="500" loading="lazy">
+                <img src="img/banner.svg" class="thumbnail d-block mx-lg-auto mx-sm-auto img-fluid"
+                    alt="Bootstrap Themes" width="700" height="500" loading="lazy">
             </div>
             <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3"><span>Hi, My Name is</span><br>
-                    Fauzan Nurhikmah</h1>
-                <p class="lead">Seorang teknologi enthusiast yang saat ini sedang menekuni
-                    dunia coding dan kadang suka design</p>
-                <div class="d-md-flex justify-content-lg-start align-items-center start">
-                    <button type="button" class="btn btn-primary btn-start btn-md"><i
-                            class="fa-solid fa-play"></i></button>
-                    <span class="btn-label">Start</span>
+                <div class="content">
+                    <h1 class="display-5 fw-bold lh-1 mb-3"><span>Hi, My Name is</span><br>
+                        Fauzan Nurhikmah</h1>
+                    <p class="lead">Seorang teknologi enthusiast yang saat ini sedang menekuni
+                        dunia coding dan kadang suka design</p>
+                    <div class="d-md-flex justify-content-lg align-items-center start position-relative">
+                        <button type="button" class="btn btn-hire d-flex align-items-center gap-2">
+                            <img src="img/left.svg" alt=""> Hire Me ! <img src="img/right.svg" alt="">
+                        </button>
+                        <button class="btn hud-button"> Here Me ! </button>
+                        <img src="img/hud.svg" alt="" class="hud-frame">
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container skills" id="skills">
+    <div class="container skills d-none" id="skills">
         <div class="row justify-content-center">
             <div class="col-11">
-                <div class="card p-lg-5 p-md-4 p-sm-4">
+                <div class="card p-lg-5 p-md-4 p-sm-4 position-relative">
+                    <img src="img/hud-frame2.svg" alt="" class="hud-frame2">
                     <div class="row">
                         <div class="col-md-4 col-sm-12 d-flex align-items-center">
                             <i class="fa-solid text-info fa-3x fa-server"></i>
@@ -100,14 +125,18 @@
         </div>
     </div>
 
-    <div class="container col-xxl-8 px-4 about" id="about">
+    <div class="container col-xxl-8 px-4 about d-none" id="about">
         <div class="row justify-content-center">
             <div class="col-10 col-sm-8 col-lg-6">
                 <img src="img/about.png" class="d-block mx-lg-auto mx-sm-auto img-fluid" alt="Bootstrap Themes"
                     width="700" height="500" loading="lazy">
             </div>
             <div class="col-lg-6">
-                <h3>About</h3>
+                <h3 class="d-flex align-items-center gap-2">
+                    <img src="img/left.svg" alt="">
+                    About
+                    <img src="img/right.svg" alt="">
+                </h3>
                 <p>Saya merupakan lulusan dari jurusan Teknik Informatika,
                     saya sangat suka dengan teknologi terutama dengan
                     website, karena saya bisa belajar bagaimana cara
@@ -129,8 +158,12 @@
         </div>
     </div>
 
-    <div class="container contact px-sm-4" id="contact">
-        <h3>Contact</h3>
+    <div class="container contact px-sm-4 d-none" id="contact">
+        <h3 class="d-flex align-items-center justify-content-center gap-2">
+            <img src="img/left.svg" alt="">
+            Contact
+            <img src="img/right.svg" alt="">
+        </h3>
         <div class="row justify-content-center">
             <div class="col-md-3 col-sm-12">
                 <div class="card border-0 h-100">
@@ -176,7 +209,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="d-none">
         <div class="container py-3">
             <div class="d-flex justify-content-between">
                 <p>Copyright© All Reserved</p>
@@ -191,10 +224,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
-    <script>
-        const heightBody = document.body.clientHeight
-        document.querySelector(".stars").style.height = `${heightBody}px`
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+        integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+        integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

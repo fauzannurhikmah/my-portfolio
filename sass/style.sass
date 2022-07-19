@@ -15,8 +15,31 @@ body
     background-size: cover
     overflow-x: hidden !important
 
+.hidden
+    display: none !important
+
+.btn-hire
+    color: $color-text
+    border: none
+    border-left: 5px
+    padding: .6rem 1.8rem
+    transition: .25s ease-in-out
+    img
+        transition: .25s ease-out
+        width: 28px
+
+    &:hover
+        color: $color-text
+        opacity: .8
+
+    &:hover > img:nth-child(1)
+        transform: translateX(-5px)
+    &:hover > img:nth-child(2)
+        transform: translateX(5px)
+
 .navbar
     background: #0e0a1659 !important
+    padding: .7rem 0
     .navbar-brand
         font-weight: 700
         color: $color2
@@ -27,6 +50,23 @@ body
             color: $color-text
 
 .banner
+    .overlay-screen
+        padding: 8rem 0
+        h1
+            font-size: 4rem
+            font-weight: 800
+        p
+            margin-bottom: 1.3rem
+            letter-spacing: 1px
+            font-weight: 200
+            color: $color-text
+
+        svg
+            clip-path: polygon(50% 100%, 50% 100%, 50% 0%, 50% 0%)
+
+        .transition
+            display: none !important
+
     h1
         color: $color-text
         span
@@ -36,10 +76,9 @@ body
     .btn-start
         transform: rotate(45deg)
         position: relative
-        background-image: linear-gradient(70deg, $color1, $color2)
+        background-image: linear-gradient(45deg, #132c52, #1252cf)
         border: none !important
-        margin-right: 20px
-        -webkit-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1)
+        animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1)
         &::before
             content: ''
             position: absolute
@@ -49,30 +88,72 @@ body
             bottom: -7px
             border: 1px solid $color1
             border-radius: 5px
+            transition: .25s ease-in-out
         &:hover
-            -webkit-animation: none
+            animation: pause
             transform: rotate(45deg) scale(1.1)
+            &::before
+                transform: rotate(180deg)
+        &.active
+            animation: pulse 1s cubic-bezier(0.66, 0, 0, 1) -.5s
         i
             transform: rotate(-45deg)
-    .btn-label
-        text-transform: uppercase
-        letter-spacing: 4px
-        font-weight: 500 !important
-        color: $color1
+    .hud-button
+        color: $color-text
+        letter-spacing: 3px
+        font-weight: 500
+        margin-left: 12px
+        padding: .6rem 4.2rem
+        position: relative
+        z-index: 1
+        border: 1px dashed #a3a5ac23
+
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            top: 0
+            background: #707dad4b
+            backdrop-filter: 10px
+            transform-origin: bottom
+            transform: scaleY(0)
+            transition: .23s cubic-bezier(0.66, 0, 0, 1)
+
+        &:hover::after
+            transform: scaleY(1)
+
+    .hud-frame
+        position: absolute
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+        left: -90px
+        bottom: -110px
 
 @keyframes pulse
     50%
         box-shadow: 0 0 0 0 $color1
     100%
-        box-shadow: 0 0 0 10px #9282fd00
+        box-shadow: 0 0 0 20px #9282fd00
 
 .skills
     margin-bottom: 100px
     .card
+        opacity: 0
         border-radius: 10px
-        box-shadow: 15px 15px 0 $color1
+        // box-shadow: 15px 15px 0 $color1
         background: transparent
-        border: 1px solid #8879ed
+        border: none
+        // backdrop-filter: 10px
+        // border: 1px solid #8879ed
+        img.hud-frame2
+            clip-path: polygon(0 0, 0 0, 100% 100%, 100% 100%, 100% 100%, 0 0)
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            object-fit: cover
+            z-index: -1
     ul
         list-style: none
         margin-bottom: 0
@@ -82,7 +163,6 @@ body
     margin-bottom: 100px
     h3
         font-weight: 600 !important
-        border-bottom: 1px solid #d3d3d3
         padding-bottom: 5px
         margin-bottom: 20px
         color: $color-text
@@ -106,22 +186,29 @@ body
         margin-bottom: 25px
         text-align: center
         color: $color-text
+
     .card
         background: transparent
         .icon
             margin-bottom: 20px
         .caption
             text-align: center
-            background-image: linear-gradient(135deg, $color1, $color2)
+            // background-image: linear-gradient(45deg, #132c52 #1251cf)
+            background: #062b745b
+            backdrop-filter: 10px
+            border: 1px solid #1251cf
             padding: 13px 20px
             border-radius: 8px
             color: #fff
+            transition: .25s ease-out
+            &:hover
+                background: #062b74
+                backdrop-filter: 0
             a
                 text-decoration: none
                 color: #fff
                 &:hover
                     color: #171ae6
-
 footer
     box-shadow: 0 -10px 11px #0000000d
     p
@@ -133,30 +220,29 @@ footer
             color: #686868
             font-weight: 600
 
-@keyframes flicker
-    0%,100%
-        filter: blur(2px) opacity(0)
-    50%
-        filter: blur(0) opacity(1)
+@media ( max-width: 1122px )
+    .banner
+        .hud-button
+            padding: .45rem 3.5rem
+            margin-left: 16px
+        .hud-frame
+            transform: scale(.88)
+            bottom: -100px
 
-.stars
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat
-    // background: url(../img/stars.webp) no-repeat
-    // background-size: cover
-    // background-attachment: fixed
-    position: absolute
-    width: 100vw
-    height: 100vh
-    display: block
-    animation: flicker 3s linear infinite
-    z-index: -1
+@media (min-width:992px)
+    .btn-hire
+        display: none !important
 
-@media (max-width:980px)
+@media (max-width:989px)
     .navbar
         button
             border: unset
             span
                 filter: invert(1)
+    .hud-button, .hud-frame
+        display: none
+    .button-hire
+        display: block
 
     .skills, .about, .contact
         margin-bottom: 60px
@@ -165,19 +251,22 @@ footer
         text-align: center
         p.lead
             font-size: 1rem
-        .start
+        .btn-hire
+            margin: 0 auto !important
+            text-align: center !important
             justify-content: center !important
-            text-align: center
-            button
-                transform: scale(.9) rotate(45deg)
-                margin: unset
-            span
-                display: none
     .contact
         .caption
             font-size: .8rem
 
 @media (max-width:768px)
+    .banner
+        .overlay-screen
+            padding: 5rem 0
+            svg
+                width: 360px
+            h1
+                font-size: 3rem
     .skills
         .row
             padding-bottom: 0 !important
@@ -188,6 +277,10 @@ footer
                 &:last-child
                     border-bottom: none
                     margin-bottom: unset
+        .card
+            img.hud-frame2
+                height: 100%
+
     .contact
         .row
             div
@@ -198,16 +291,6 @@ footer
                     margin-bottom: unset
 
 @media (max-width:578px)
-    // .stars
-    //     background: url(../img/stars.webp) no-repeat
-    //     background-size: cover
-    //     background-attachment: fixed
-    //     animation: none
-    //     position: absolute
-    //     width: 100vw
-    //     height: 100vh
-    //     display: block
-    //     z-index: -1
 
     .skills, .about, .contact
         margin-bottom: 40px
