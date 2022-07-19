@@ -9,10 +9,15 @@ tl1.from('nav', { opacity: 0, y: -100 }, "-=2")
     }, '-=1')
     .from('.card .col-md-4', {
         delay: 1, y: -100, stagger: .5, opacity: 0
-    }, '-=1')
+    }, '-=1.5')
     .to('.skills img.hud-frame2', {
         duration: 3, delay: 1.7, clipPath: 'polygon(0% 0%, 0% 100%, 0% 100%, 100% 100%, 100% 0%, 100% 0%)',
-    }, '-=2.5')
+    }, '-=2.6')
+    .from('.about .about-img', { x: -100, opacity: 0 }, '-=2')
+    .from('.about .content', { x: 100, delay: .6, opacity: 0 }, '-=2')
+    .from('.contact h3', { opacity: 0, y: -100, delay: 1 }, '-=1.3')
+    .from('.contact .card i', { scale: 0, rotate: 45, stagger: .5, duration: .8 }, '-=1.3')
+    .from('.contact .card .caption', { y: 80, opacity: 0, stagger: .3, delay: .5 }, '-=1.5')
 
 tl2.from('.overlay-screen h1', { opacity: 0, y: -200 })
     .from('.overlay-screen p', { opacity: 0, y: -50, delay: .58 }, '=-2')
