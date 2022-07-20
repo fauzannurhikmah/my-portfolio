@@ -277,9 +277,9 @@ body {
   transition: 0.25s cubic-bezier(0.66, 0, 0, 1);
 }
 .contact .card .caption:hover {
-  background: #062b74;
-  -webkit-backdrop-filter: 0;
-          backdrop-filter: 0;
+  background: rgba(57, 56, 122, 0.2274509804);
+  -webkit-backdrop-filter: blur(0);
+          backdrop-filter: blur(0);
 }
 .contact .card .caption:hover::before {
   transform: translate(8px, -50%);
