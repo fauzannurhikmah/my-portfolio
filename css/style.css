@@ -40,8 +40,8 @@ body {
   position: fixed;
   top: 0;
   background: rgba(47, 18, 110, 0.8431372549) !important;
-  -webkit-backdrop-filter: 10px;
-          backdrop-filter: 10px;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
   z-index: 999;
   width: 100%;
   padding: 0.7rem 0;
@@ -141,9 +141,10 @@ body {
   bottom: 0;
   top: 0;
   background: rgba(112, 125, 173, 0.2941176471);
-  -webkit-backdrop-filter: 10px;
-          backdrop-filter: 10px;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   transform-origin: bottom;
+  z-index: -1;
   transform: scaleY(0);
   transition: 0.23s cubic-bezier(0.66, 0, 0, 1);
 }
@@ -241,8 +242,8 @@ body {
   position: relative;
   text-align: center;
   background: rgba(191, 190, 255, 0.0823529412);
-  -webkit-backdrop-filter: 10px;
-          backdrop-filter: 10px;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   border-left: 1px solid #8eb3ff;
   border-right: 1px solid #8eb3ff;
   padding: 13px 20px;
@@ -297,8 +298,8 @@ body {
 footer {
   box-shadow: 0 -10px 11px rgba(0, 0, 0, 0.0509803922);
   background: rgba(11, 6, 88, 0.6156862745);
-  -webkit-backdrop-filter: 10px;
-          backdrop-filter: 10px;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 footer p {
   padding: 0 0 !important;
