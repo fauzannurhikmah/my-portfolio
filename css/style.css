@@ -39,6 +39,7 @@ body {
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
   background: rgba(47, 18, 110, 0.8431372549) !important;
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
@@ -328,6 +329,9 @@ footer p span {
   }
 }
 @media (max-width: 989px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
   .navbar button {
     border: unset;
   }
@@ -361,9 +365,6 @@ footer p span {
 @media (max-width: 768px) {
   body {
     background-position: center;
-  }
-  .banner .overlay-screen {
-    padding: 5rem 0;
   }
   .banner .overlay-screen svg {
     width: 360px;

@@ -31,6 +31,7 @@ button.addEventListener('click', () => {
     var endTimeline = tl2.to('.overlay-screen', { opacity: 0, y: -200 })
     if (endTimeline) {
         setTimeout(() => {
+
             tl2.from('.transition .thumbnail', { opacity: 0, x: 100 })
                 .from('.transition .content', { opacity: 0, x: -100 }, '-=2')
                 .to('.transition .content img', { duration: 2.5, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=1.5')
@@ -50,7 +51,6 @@ button.addEventListener('click', () => {
 
     if (clicks == 0) {
         tl1.restart(true);
-
     }
     clicks++
 })

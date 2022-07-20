@@ -40,6 +40,7 @@ body
 .navbar
     position: fixed
     top: 0
+    left: 0
     background: #2f126ed7 !important
     backdrop-filter: blur(1px)
     z-index: 999
@@ -275,6 +276,8 @@ footer
         display: none !important
 
 @media (max-width:989px)
+    html, body
+        overflow-x: hidden !important
     .navbar
         button
             border: unset
@@ -305,7 +308,6 @@ footer
         background-position: center
     .banner
         .overlay-screen
-            padding: 5rem 0
             svg
                 width: 360px
             h1
@@ -334,7 +336,6 @@ footer
                     margin-bottom: unset
 
 @media (max-width:578px)
-
     .skills, .about, .contact
         margin-bottom: 40px
 
