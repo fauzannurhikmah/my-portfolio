@@ -113,30 +113,36 @@ body
         padding: .6rem 4.2rem
         position: relative
         z-index: 1
-        border: 1px dashed #a3a5ac23
+        background: #707dad4b
+        backdrop-filter: blur(2px)
+        // border: 1px dashed #a3a5ac23
 
-        &::after
-            content: ''
-            position: absolute
-            left: 0
-            right: 0
-            bottom: 0
-            top: 0
-            background: #707dad4b
-            backdrop-filter: blur(2px)
-            transform-origin: bottom
-            z-index: -1
-            transform: scaleY(0)
-            transition: .23s cubic-bezier(0.66, 0, 0, 1)
+        // &::after
+        //     content: ''
+        //     position: absolute
+        //     left: 0
+        //     right: 0
+        //     bottom: 0
+        //     top: 0
+        //     background: #707dad4b
+        //     backdrop-filter: blur(2px)
+        //     transform-origin: bottom
+        //     z-index: -1
+        //     transform: scaleY(0)
+        //     transition: .23s cubic-bezier(0.66, 0, 0, 1)
 
-        &:hover::after
-            transform: scaleY(1)
+        // &:hover::after
+        // transform: scaleY(1)
 
     .hud-frame
         position: absolute
         clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
         left: -90px
         bottom: -110px
+
+@keyframes spinner
+    to
+        transform: rotate(360deg)
 
 @keyframes pulse
     50%

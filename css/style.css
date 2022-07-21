@@ -132,25 +132,9 @@ body {
   padding: 0.6rem 4.2rem;
   position: relative;
   z-index: 1;
-  border: 1px dashed rgba(163, 165, 172, 0.137254902);
-}
-.banner .hud-button::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
   background: rgba(112, 125, 173, 0.2941176471);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
-  transform-origin: bottom;
-  z-index: -1;
-  transform: scaleY(0);
-  transition: 0.23s cubic-bezier(0.66, 0, 0, 1);
-}
-.banner .hud-button:hover::after {
-  transform: scaleY(1);
 }
 .banner .hud-frame {
   position: absolute;
@@ -160,6 +144,17 @@ body {
   bottom: -110px;
 }
 
+@-webkit-keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @-webkit-keyframes pulse {
   50% {
     box-shadow: 0 0 0 0 #9282FD;
@@ -168,7 +163,6 @@ body {
     box-shadow: 0 0 0 20px rgba(146, 130, 253, 0);
   }
 }
-
 @keyframes pulse {
   50% {
     box-shadow: 0 0 0 0 #9282FD;
