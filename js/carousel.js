@@ -4,7 +4,7 @@ $(document).ready(function () {
         margin: 40,
         responsiveClass: true,
         lazyLoad: true,
-        navText: ["<img src='../img/left.png' width='30'></img>", "<img src='../img/right.png' width='30'></img>"],
+        navText: ["<img src='img/left.png' width='30'></img>", "<img src='img/right.png' width='30'></img>"],
         responsive: {
             0: {
                 items: 1,
