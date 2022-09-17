@@ -401,10 +401,14 @@ footer
         .row
             padding-bottom: 0 !important
             text-align: center
-            .icon-box
-                margin: 6px auto !important
-            p
-                width: auto
+            .col
+                margin-bottom: 20px
+                .icon-box
+                    margin: 6px auto !important
+                p
+                    width: auto
+                &:last-child
+                    margin-bottom: 0
 
     .contact
         .row
@@ -413,7 +417,7 @@ footer
                 .caption
                     font-size: 14px
                 &:last-child
-                    margin-bottom: unset
+                    margin-bottom: 0
 
 @media (max-width:578px)
     .skills, .about, .contact

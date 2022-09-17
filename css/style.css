@@ -463,11 +463,17 @@ footer p span {
     padding-bottom: 0 !important;
     text-align: center;
   }
-  .skills .row .icon-box {
+  .skills .row .col {
+    margin-bottom: 20px;
+  }
+  .skills .row .col .icon-box {
     margin: 6px auto !important;
   }
-  .skills .row p {
+  .skills .row .col p {
     width: auto;
+  }
+  .skills .row .col:last-child {
+    margin-bottom: 0;
   }
   .contact .row div {
     margin-bottom: 25px;
@@ -476,7 +482,7 @@ footer p span {
     font-size: 14px;
   }
   .contact .row div:last-child {
-    margin-bottom: unset;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 578px) {
