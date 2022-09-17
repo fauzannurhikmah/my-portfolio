@@ -151,27 +151,36 @@ body
         box-shadow: 0 0 0 20px #9282fd00
 
 .skills
-    margin-bottom: 100px
+    margin-top: 60px
+    margin-bottom: 80px
     .card
         opacity: 0
         border-radius: 10px
-        // box-shadow: 15px 15px 0 $color1
         background: transparent
         border: none
-        // backdrop-filter: 10px
-        // border: 1px solid #8879ed
-        img.hud-frame2
-            clip-path: polygon(0 0, 0 0, 100% 100%, 100% 100%, 100% 100%, 0 0)
-            position: absolute
-            left: 0
-            top: 0
-            width: 100%
-            object-fit: cover
-            z-index: -1
-    ul
-        list-style: none
-        margin-bottom: 0
-        color: $color-text
+        .icon-box
+            width: 72px
+            height: 75px
+            background: url('../img/hud-frame-icon.png')
+            background-size: cover
+            text-align: center
+            line-height: 80px
+            font-size: 26px
+            margin-bottom: 20px
+            position: relative
+
+            &::after
+                content: ''
+                position: absolute
+                z-index: -1
+                width: 100%
+                height: 100%
+                left: 0
+                top: 0
+                background: #b8c6ff15
+                backdrop-filter: blur(2px)
+        p
+            color: $text-muted
 
 .about
     margin-bottom: 100px
@@ -192,14 +201,84 @@ body
         span
             color: #b9bbbd
             font-size: 14px
+.artworks
+    margin-bottom: 100px
+    h3
+        font-weight: 600 !important
+        color: $color-text
+        margin-bottom: 10px
+        text-align: center
+    p
+        color: $text-muted
+        margin-bottom: 20px
+
+    .owl-carousel
+        .items
+            padding: 20px
+            .bg-top
+                position: relative
+                background: #b8c6ff31
+                backdrop-filter: blur(2px)
+                padding: 15px
+
+                &::after
+                    content: ''
+                    position: absolute
+                    z-index: -1
+                    top: -15px
+                    left: -15px
+                    bottom: -15px
+                    right: -15px
+                    border: 1.5px solid #b8c6ff5b
+                    clip-path: polygon(80% 0, 100% 0, 100% 25%, 25% 100%, 0 100%, 0 80%)
+
+    .owl-nav
+        position: absolute
+        top: 50%
+        left: 50%
+        display: flex
+        width: 102%
+        transform: translate(-50%,-50%)
+        justify-content: space-between
+        button
+            opacity: .6
+            &:hover
+                opacity: 1
+
+    .owl-dots
+        display: flex
+        justify-content: center
+        gap: 8px
+        margin-top: 10px
+        button
+            position: relative
+            width: 10px
+            height: 10px
+            border: 1px solid #8879ed75
+            transform: rotate(45deg)
+        button.active
+            border: 1px solid #b7acff
+            &::before
+                content: ''
+                position: absolute
+                top: 50%
+                left: 50%
+                width: 60%
+                height: 60%
+                background: #b7acff
+                border-radius: 50%
+                transform: translate(-50%,-50%)
 
 .contact
     margin-bottom: 100px
     h3
         font-weight: 600 !important
-        margin-bottom: 25px
+        margin-bottom: 10px
         text-align: center
         color: $color-text
+    p
+        color: $text-muted
+        margin-bottom: 20px
 
     .card
         background: transparent
@@ -225,9 +304,9 @@ body
                 left: 4px
                 top: 50%
                 transform: translateY(-50%)
-                border-left: 4px solid #8eb3ff
-                border-top: 4px solid #8eb3ff
-                border-bottom: 4px solid #8eb3ff
+                border-left: 4px solid #8eb4ff8f
+                border-top: 4px solid #8eb4ff8f
+                border-bottom: 4px solid #8eb4ff8f
                 transition: .25s cubic-bezier(0.66, 0, 0, 1)
             &::after
                 content: ''
@@ -237,9 +316,9 @@ body
                 right: 4px
                 top: 50%
                 transform: translateY(-50%)
-                border-right: 4px solid #8eb3ff
-                border-top: 4px solid #8eb3ff
-                border-bottom: 4px solid #8eb3ff
+                border-right: 4px solid #8eb4ff8f
+                border-top: 4px solid #8eb4ff8f
+                border-bottom: 4px solid #8eb4ff8f
                 transition: .25s cubic-bezier(0.66, 0, 0, 1)
 
             &:hover
@@ -321,16 +400,9 @@ footer
     .skills
         .row
             padding-bottom: 0 !important
-            div
-                border-bottom: 1px solid #d9d9d9
-                margin-bottom: 1rem
-                padding-bottom: 1rem
-                &:last-child
-                    border-bottom: none
-                    margin-bottom: unset
-        .card
-            img.hud-frame2
-                height: 100%
+            text-align: center
+            .icon-box
+                margin: 6px auto !important
 
     .contact
         .row
@@ -348,16 +420,6 @@ footer
     .skills
         .card
             padding: 1rem 1.5rem
-            ul
-                font-size: 14px
-            .row
-                div
-                    border-bottom: 1px solid #d9d9d9
-                    margin-bottom: 1rem
-                    padding-bottom: 1rem
-                    &:last-child
-                        border-bottom: none
-                        margin-bottom: unset
 
     .contact
         .row

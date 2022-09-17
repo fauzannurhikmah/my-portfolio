@@ -34,11 +34,8 @@ button.addEventListener('click', () => {
                     opacity: 1, duration: 1,
                 })
                 .from('.skills .card .col-md-4', {
-                    delay: .5, duration: .8, y: -100, stagger: .5, opacity: 0
+                    delay: .5, duration: .5, y: -100, stagger: .5, opacity: 0
                 }, '-=1')
-                .to('.skills img.hud-frame2', {
-                    duration: 2, delay: 1, clipPath: 'polygon(0% 0%, 0% 100%, 0% 100%, 100% 100%, 100% 0%, 100% 0%)',
-                }, '-=1.5')
 
             gsap.timeline({
                 defaults: {
@@ -54,12 +51,24 @@ button.addEventListener('click', () => {
                 defaults: {
                     duration: 2, ease: "power4.out"
                 }, scrollTrigger: {
+                    trigger: '.artworks',
+                    start: 'top center'
+                }
+            }).from('.artworks h3', { y: -100, opacity: 0 })
+                .from('.artworks p', { y: 50, delay: .6, opacity: 0 }, '-=2')
+                .from('.artworks .owl-carousel', { x: -100, opacity: 0 }, '-=1.5')
+
+            gsap.timeline({
+                defaults: {
+                    duration: 2, ease: "power4.out"
+                }, scrollTrigger: {
                     trigger: '.contact',
                     start: 'top bottom'
                 }
             }).from('.contact h3', { opacity: 0, y: -100, delay: 1 })
-                .from('.contact .card i', { scale: 0, rotate: 45, stagger: .5, duration: .5 }, '-=1')
-                .from('.contact .card .caption', { y: 80, opacity: 0, stagger: .3, delay: .5 }, '-=1.3')
+                .from('.contact p', { opacity: 0, y: 45, duration: .5 }, '-=.8')
+                .from('.contact .card i', { scale: 0, rotate: 45, stagger: .45, duration: .4 }, '-=1')
+                .from('.contact .card .caption', { y: 80, opacity: 0, stagger: .3, duration: .3, delay: .2 }, '-=1.3')
 
             document.querySelector('.overlay-screen').classList.add('hidden')
             document.querySelector('.transition').classList.remove('hidden')
