@@ -463,16 +463,16 @@ footer p span {
     padding-bottom: 0 !important;
     text-align: center;
   }
-  .skills .row .col {
+  .skills .row .column {
     margin-bottom: 20px;
   }
-  .skills .row .col .icon-box {
+  .skills .row .column .icon-box {
     margin: 6px auto !important;
   }
-  .skills .row .col p {
+  .skills .row .column p {
     width: auto;
   }
-  .skills .row .col:last-child {
+  .skills .row .column:last-child {
     margin-bottom: 0;
   }
   .contact .row div {
