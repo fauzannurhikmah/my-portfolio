@@ -88,7 +88,7 @@ body {
   font-weight: 300 !important;
 }
 .banner p.lead {
-  color: #8787b3 !important;
+  color: #b5b5df !important;
 }
 .banner .btn-start {
   transform: rotate(45deg);
@@ -204,7 +204,7 @@ body {
           backdrop-filter: blur(2px);
 }
 .skills .card p {
-  color: #8787b3 !important;
+  color: #b5b5df !important;
   width: 80%;
 }
 
@@ -219,7 +219,7 @@ body {
 }
 .about p {
   font-weight: 300 !important;
-  color: #8787b3 !important;
+  color: #b5b5df !important;
 }
 .about h5 {
   color: #706BE9;
@@ -239,7 +239,7 @@ body {
   text-align: center;
 }
 .artworks p {
-  color: #8787b3 !important;
+  color: #b5b5df !important;
   margin-bottom: 20px;
 }
 .artworks .owl-carousel .items {
@@ -317,7 +317,7 @@ body {
   color: #f5f5f5 !important;
 }
 .contact p {
-  color: #8787b3 !important;
+  color: #b5b5df !important;
   margin-bottom: 25px;
 }
 .contact .card {
